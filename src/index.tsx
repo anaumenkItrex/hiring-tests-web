@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {UserProvider} from "./context/user";
+import {ChatProvider} from "./context/chat";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <ChatProvider>
+        <App/>
+      </ChatProvider>
+    </UserProvider>
   </React.StrictMode>
 );
 

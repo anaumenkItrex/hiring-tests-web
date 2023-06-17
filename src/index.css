@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+  background: rgba(52,13,99,1);
+  background: linear-gradient(90deg, rgb(120, 48, 147) 0%, rgba(103,15,167,1) 57%, rgba(52,13,99,1) 100%);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -1,0 +1,60 @@
+.user-info-container {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+}
+
+.user-info-menu-icon {
+    cursor: pointer;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.user-info-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info-menu {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    width: 90px;
+}
+
+.user-name-input {
+    background-color: transparent;
+    color: white;
+    cursor: default;
+    border: none;
+    font-size: 16px;
+}
+
+.user-name-input:focus-visible {
+    outline: none;
+}
+
+.user-menu-button {
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    transition: 2s;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.user-menu-button:hover {
+    background-color: #bbbbbb;
+}
+
+.user-info-error {
+    color: darkred;
+    position: absolute;
+    bottom: 0;
+    left: 71px;
+}
