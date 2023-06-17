@@ -14,18 +14,22 @@ const useValue = () => {
 
   const sendMessage = (newMessage: string, currentUser: number, currentUserName: string) => {
     if (currentChat) {
-      const message = {
-        id: currentChat.messages[currentChat.messages.length - 1].id + 1,
-        fromUserId: currentUser,
-        fromUserName: currentUserName,
-        message: newMessage
-      }
-      setChatList(chatList.map((chat) => {
-        if (chat.id === currentChatId) {
-          chat.messages = [...chat.messages, message]
+      const messages = newMessage.match(/.{1,1000}/g)?.map((message, index) => {
+        return {
+          id: currentChat.messages[currentChat.messages.length - 1].id + index + 1,
+          fromUserId: currentUser,
+          fromUserName: currentUserName,
+          message: message
         }
-        return chat;
-      }))
+      })
+      if (messages) {
+        setChatList(chatList.map((chat) => {
+          if (chat.id === currentChatId) {
+            chat.messages = [...chat.messages, ...messages]
+          }
+          return chat;
+        }))
+      }
     }
   }
 
