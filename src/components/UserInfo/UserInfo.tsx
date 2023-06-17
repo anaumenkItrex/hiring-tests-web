@@ -1,4 +1,4 @@
-import MenuIcon from '../../assets/menu-icon.svg';
+import { MenuIcon } from '../MenuIcon/MenuIcon';
 import {ChangeEvent, useContext, useEffect, useRef, useState} from "react";
 import {UserContext} from "../../context/user";
 import {SettingsList} from "../SettingsList/SettingsList";
