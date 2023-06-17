@@ -64,5 +64,5 @@ export const Chat = () => {
         <button className='send-field-button' onClick={onSendButtonClick}>SEND</button>
       </div>
     </div>
-  ): null;
+  ):  <div className='chat-container-empty'>Pick the chat</div>;
 }
