@@ -20,8 +20,10 @@ export const UserInfo = () => {
   const key = HandleUserKeyPress()
 
   const handleCancel = () => {
-    setIsDisabled(true);
-    setInputValue(userName)
+    if (!disabled) {
+      setIsDisabled(true);
+      setInputValue(userName)
+    }
   }
 
   HandleUserOutsideRefClick(userInfoContainerRef, handleCancel);
