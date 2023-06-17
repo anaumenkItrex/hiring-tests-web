@@ -54,7 +54,10 @@ export const UserInfo = () => {
   }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value)
+    const value = e.target.value;
+    if (value.length <= 9) {
+      setInputValue(value)
+    }
   }
 
   const handleSaveButton = () => {

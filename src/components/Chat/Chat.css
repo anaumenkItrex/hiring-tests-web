@@ -17,6 +17,8 @@
     width: fit-content;
     position: relative;
     border-radius: 10px;
+    line-break: anywhere;
+    white-space: break-spaces;
 }
 
 .chat-messages-item.left {

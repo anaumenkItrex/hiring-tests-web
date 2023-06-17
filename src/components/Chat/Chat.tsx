@@ -47,7 +47,7 @@ export const Chat = () => {
         {currentChat.messages.map((message) => {
           return (
             <div key={message.id} className={`chat-messages-item ${userId === message.fromUserId ? 'right': 'left'}`}>
-              {message.fromUserName}: {message.message}
+              {`${message.fromUserName}: ${message.message}`}
             </div>
           )
         })}
